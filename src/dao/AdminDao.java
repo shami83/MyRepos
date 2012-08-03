@@ -12,7 +12,7 @@ public class AdminDao extends JDBCDao{
 	{
 		super();
 	}
-	
+	/* test*/
 	public AdminBean findByNameAndPassword(AdminBean bean) throws Exception
 	{
 		st =con.createStatement();
