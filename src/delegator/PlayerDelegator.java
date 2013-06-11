@@ -216,7 +216,7 @@ public class PlayerDelegator extends HttpServlet {
 		PlayerDao dao =new PlayerDao();
 		PlayerBean bean = dao.findByID(id);
 		Map<String,String> map = GameProperties.getInstance().getMapProperty(GameProperties.CATEGORY);
-		String imageName=map.get(bean.getCategory());
+		String imageName=map.get(bean.getCategory().trim().toLowerCase());
 		String anchorImage=null;
 		if(imageName.equalsIgnoreCase("default.jpg"))
 		{

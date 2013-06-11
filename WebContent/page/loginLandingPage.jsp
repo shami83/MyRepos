@@ -26,6 +26,10 @@ theme="images/"+theme+"theme.jpg";
 
 <tr><td style="font-family:arial;font-size:15;text-decoration:none"><a style="text-decoration:none" href="team?param=viewAll">View All Team</a>:</td>
 <td style="font-family:arial;font-size:15">Please click this url to View  all Teams.</td></tr>
+
+<tr><td style="font-family:arial;font-size:15;text-decoration:none"><a style="text-decoration:none" href="misc?theme=green">Change Theme</a>:</td>
+<td style="font-family:arial;font-size:15">Please click this url to change theme.</td></tr>
+
 </table>
 </fieldset>
 <jsp:include page="footer.jsp"></jsp:include>

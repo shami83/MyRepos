@@ -67,7 +67,18 @@ public class GameProperties {
 		}
 		
 		
-		
+	public void setDynamicProp(String key,String value)
+	{
+		String oldValue = prop.getProperty(key);
+		prop.setProperty(key, value);
+		System.out.println(oldValue + "Change to"+ value);
+	}
+	
+	public Properties getinMemoryProp()
+	{
+		return prop;
+	}
+	
 
 
 
