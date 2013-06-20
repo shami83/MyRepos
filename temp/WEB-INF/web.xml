@@ -109,4 +109,14 @@
     <servlet-name>GenericImageServlet</servlet-name>
     <url-pattern>/imgrender</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MiscDelegator</display-name>
+    <servlet-name>MiscDelegator</servlet-name>
+    <servlet-class>delegator.MiscDelegator</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MiscDelegator</servlet-name>
+    <url-pattern>/misc</url-pattern>
+  </servlet-mapping>
 </web-app>

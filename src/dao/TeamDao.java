@@ -21,6 +21,7 @@ public class TeamDao extends JDBCDao{
 	public List findAllTeam() throws Exception
 	{
 		List list =null;
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);
@@ -34,6 +35,7 @@ public class TeamDao extends JDBCDao{
 	
 	public TeamBean findByID(Integer id) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);
@@ -44,7 +46,7 @@ public class TeamDao extends JDBCDao{
 		System.out.println(this.getClass()+": " + query.toString());
 		ResultSet result = st.executeQuery(query.toString());
 		TeamBean bean =(TeamBean)processSingleRow(result);
-		//closeAll();
+		closeAll();
 		return bean;
 	}
 

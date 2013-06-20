@@ -18,6 +18,8 @@ public class GameProperties {
 	public static final String SITE_FULLNAME="site.fullName";
 	public static final String THEME="theme";
 	public static final String THEMEFONT="theme.font";
+	public static final String DB_USER="db.user";
+	public static final String DB_PASSWORD="db.password";
 	public static GameProperties getInstance()
 	{
 		return instance==null?instance=new GameProperties():instance;

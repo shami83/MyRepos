@@ -15,6 +15,7 @@ public class AdminDao extends JDBCDao{
 	/* test*/
 	public AdminBean findByNameAndPassword(AdminBean bean) throws Exception
 	{
+		con = open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);

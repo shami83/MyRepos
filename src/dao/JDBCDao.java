@@ -3,9 +3,12 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.List;
+
+import javax.naming.NamingException;
 
 import bean.UKPLBean;
 
@@ -26,9 +29,13 @@ public abstract class  JDBCDao {
 	protected final String ORDER_BY =" ORDER BY ";
 	public JDBCDao()throws Exception
 	{
-		con =UKPLConnection.getConnection();
+		
 	}
-	
+	public Connection open() throws SQLException, NamingException
+	{
+		return UKPLPooledConnection.getInstance().getPooledConnection();
+	}
+		
 	public void insert(String tableName,List values,List columnList)throws Exception
 	{
 		st=con.createStatement();

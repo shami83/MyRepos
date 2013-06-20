@@ -18,6 +18,7 @@ public class ImageDao extends JDBCDao{
 	
 	public ImageBean findById(Integer id)throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);
@@ -39,6 +40,7 @@ public class ImageDao extends JDBCDao{
 		String site = var[2];
 		
 		List list =null;
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);

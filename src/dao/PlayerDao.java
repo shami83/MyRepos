@@ -23,6 +23,7 @@ public class PlayerDao extends JDBCDao{
 	}
 	public void updateTeam(Integer id,String team) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(UPDATE);
@@ -35,11 +36,12 @@ public class PlayerDao extends JDBCDao{
 		query.append(id);
 		System.out.println(this.getClass()+": " + query.toString());
 		st.executeUpdate(query.toString());
-		//closeAll();
+		closeAll();
 		
 	}
 	public void updatePlayer(Integer id,String name,String grade,String category,String img) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(UPDATE);
@@ -74,11 +76,12 @@ public class PlayerDao extends JDBCDao{
 		query.append(id);
 		System.out.println(this.getClass()+": " + query.toString());
 		st.executeUpdate(query.toString());
-		//closeAll();
+		closeAll();
 		
 	}
 	public void deletePlayer(Integer id) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(DELETE);
@@ -88,12 +91,13 @@ public class PlayerDao extends JDBCDao{
 		query.append(id);
 		System.out.println(this.getClass()+": " + query.toString());
 		st.executeUpdate(query.toString());
-		//closeAll();
+		closeAll();
 		
 	}
 	
 	public PlayerBean findByID(Integer id) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);
@@ -111,6 +115,7 @@ public class PlayerDao extends JDBCDao{
 	public List findAllPlayer(Map paramMap,String orderColumn) throws Exception
 	{
 		List list =null;
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);

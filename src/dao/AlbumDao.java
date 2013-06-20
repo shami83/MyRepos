@@ -16,6 +16,7 @@ public class AlbumDao extends JDBCDao{
 	}
 	public AlbumBean findByID(Integer id) throws Exception
 	{
+		con=open();
 		st =con.createStatement();
 		StringBuffer query =new StringBuffer();
 		query.append(SELECT_ALL);

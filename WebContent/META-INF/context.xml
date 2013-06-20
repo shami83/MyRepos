@@ -1,0 +1,10 @@
+<Context path="/ukpl" docBase="ukpl" debug="5"
+reloadable="true" crossContext="true">
+
+<Resource name="jdbc/ukplLookUp" auth="Container"
+   type="javax.sql.DataSource" removeAbandoned="true"
+   removeAbandonedTimeout="30" maxActive="100"
+   maxIdle="30" maxWait="10000" username="root"
+   driverClassName="org.gjt.mm.mysql.Driver"
+   url="jdbc:mysql://localhost:3306/ukpl"/>
+</Context>
