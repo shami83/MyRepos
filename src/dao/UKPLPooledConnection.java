@@ -7,7 +7,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
-
+/* This class used for database pooling*/
 public class UKPLPooledConnection {
 
 	public static UKPLPooledConnection instance;
